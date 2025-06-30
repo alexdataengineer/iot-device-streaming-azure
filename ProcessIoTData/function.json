@@ -1,0 +1,14 @@
+{
+  "scriptFile": "../function_app.py",
+  "bindings": [
+    {
+      "type": "eventHubTrigger",
+      "name": "event",
+      "direction": "in",
+      "eventHubName": "alex",
+      "connection": "AzureWebJobsEventHubConnectionString",
+      "cardinality": "one",
+      "consumerGroup": "$Default"
+    }
+  ]
+} 
