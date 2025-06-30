@@ -117,7 +117,6 @@ These metrics confirm that the IoT device is actively sending telemetry (tempera
 - Auto-Scaling with Azure's serverless model
 
 ## Future Improvements
-- Deploy on real hardware (Raspberry Pi + sensors)
 - Automate device provisioning in IoT Hub
 - Integrate with dashboards (Power BI, Azure Dashboard)
 - Add advanced alerting (email, SMS, Teams)
@@ -127,4 +126,4 @@ These metrics confirm that the IoT device is actively sending telemetry (tempera
 
 ---
 
-*Note: This project was developed by Alexsander Silveira as a proof of concept to demonstrate the business value of IoT integrations using Azure services, enabling real-time monitoring and operational intelligence.*
+**Note:** This project was developed by Alexsander Silveira as a proof of concept using a real Raspberry Pi device. The IoT Hub route was configured to forward telemetry to the Event Hub, and all metrics and results shown are from real IoT device data flowing through the Azure backend.
