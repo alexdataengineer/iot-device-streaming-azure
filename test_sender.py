@@ -25,9 +25,9 @@ def send_test_messages():
                 "device_id": f"device_{i+1}"
             }
             event_data_batch.add(EventData(json.dumps(message)))
-            print(f"📤 Enviando: {message}")
+            print(f" Enviando: {message}")
         producer.send_batch(event_data_batch)
-        print("✅ Mensagens enviadas com sucesso!")
+        print(" Mensagens enviadas com sucesso!")
     finally:
         producer.close()
 

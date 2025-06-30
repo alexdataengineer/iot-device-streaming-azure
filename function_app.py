@@ -10,12 +10,12 @@ def main(event: func.EventHubEvent):
         temperature = data.get("temperature")
         humidity = data.get("humidity")
 
-        logging.info(f"📡 Mensagem recebida do IoT Hub:")
-        logging.info(f"🌡️ Temperatura: {temperature}°C")
-        logging.info(f"💧 Umidade: {humidity}%")
+        logging.info(f" Mensagem recebida do IoT Hub:")
+        logging.info(f" Temperatura: {temperature}°C")
+        logging.info(f" Umidade: {humidity}%")
 
         if temperature and float(temperature) > 30:
-            logging.warning("🚨 Alerta: Temperatura alta detectada!")
+            logging.warning(" Alerta: Temperatura alta detectada!")
 
     except Exception as e:
         logging.error(f"Erro ao processar mensagem: {e}") 
