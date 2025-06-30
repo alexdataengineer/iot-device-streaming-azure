@@ -63,10 +63,10 @@ def main(event: func.EventHubEvent):
         temperature = data.get("temperature")
         humidity = data.get("humidity")
 
-        logging.info(f"🌡️ Temp: {temperature} °C | 💧 Humidity: {humidity}%")
+        logging.info(f" Temp: {temperature} °C |  Humidity: {humidity}%")
 
         if temperature and float(temperature) > 30:
-            logging.warning("🚨 ALERT: Temperature above 30°C!")
+            logging.warning(" ALERT: Temperature above 30°C!")
 
     except Exception as e:
         logging.error(f"Error processing message: {e}")
@@ -94,6 +94,9 @@ func azure functionapp publish iotdevice
 - **Incoming Bytes:** 21.62 kB
 - **Errors:** 0
 - **Outgoing Messages:** 0
+
+  <img width="586" alt="image" src="https://github.com/user-attachments/assets/f3a0dd78-94cd-4a35-bad5-5a3a91afbbe7" />
+
 
 These metrics confirm that the IoT device is actively sending telemetry (temperature and humidity) to the IoT Hub, which is successfully being ingested into the Event Hub. This validates the data flow between the Raspberry Pi device and the Azure backend.
 
